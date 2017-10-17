@@ -1,0 +1,1816 @@
+@font-face {
+    font-family: 'Geomanist Extra Light';
+    src: url("fonts/geomanist-extralight-webfont.eot");
+    src: url("fonts/geomanist-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/geomanist-extralight-webfont.woff2") format("woff2"), url("fonts/geomanist-extralight-webfont.woff") format("woff"), url("fonts/geomanist-extralight-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Geomanist Light';
+    src: url("fonts/geomanist-light-webfont.eot");
+    src: url("fonts/geomanist-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/geomanist-light-webfont.woff2") format("woff2"), url("fonts/geomanist-light-webfont.woff") format("woff"), url("fonts/geomanist-light-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Geomanist Regular';
+    src: url("fonts/geomanist-regular-webfont.eot");
+    src: url("fonts/geomanist-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/geomanist-regular-webfont.woff2") format("woff2"), url("fonts/geomanist-regular-webfont.woff") format("woff"), url("fonts/geomanist-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+* {
+    box-sizing: border-box;
+    outline: none
+}
+
+html,
+body,
+.canvas {
+    height: 100% !important;
+    width: 100% !important;
+    display: block
+}
+
+body {
+    font-family: "Geomanist Light", Helvetica, Arial, Sans-serif;
+    letter-spacing: 0.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    color: #00d6e3;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00d6e3;
+}
+
+.static .container {
+    position: relative;
+    height: auto;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto
+}
+
+.container .wraper {
+    position: relative;
+    width: 100%;
+    padding: 0 20px
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (min-width: 768px) {
+    .container .wraper {
+        min-height: 100%
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container .wraper {
+        padding: 0 40px
+    }
+}
+
+.wraper.gradient {
+    background: #001d55;
+    background: -moz-linear-gradient(left, #001d55 0%, #01d3e0 100%);
+    background: -webkit-linear-gradient(left, #001d55 0%,#01d3e0 100%);
+    background: linear-gradient(to right, #001d55 0%,#01d3e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001d55', endColorstr='#01d3e0',GradientType=1 );
+}
+
+.container .wraper .hamburger {
+    position: fixed;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    top: 70px;
+    right: 30px;
+    width: 55px;
+    height: 34px;
+    font-size: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+.container .wraper .hamburger span {
+    display: block;
+    position: absolute;
+    top: 15px;
+    width: 55px;
+    left: 0;
+    right: 18px;
+    height: 4px;
+    background-color: #001d57
+}
+
+.container .wraper .hamburger span::before,
+.container .wraper .hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #001d57;
+    content: ""
+}
+
+.container .wraper .hamburger span::before {
+    top: -14px
+}
+
+.container .wraper .hamburger span::after {
+    bottom: -14px
+}
+
+.container .wraper .hamburger.is-active {
+    position: absolute;
+    z-index: 3000;
+    top: 30px;
+    right: 30px;
+}
+
+.container .wraper .hamburger.is-active span,
+.container .wraper .hamburger.is-active span::before,
+.container .wraper .hamburger.is-active span::after {
+    background-color: #fff !important
+}
+
+.container .wraper:first-child {
+    padding-bottom: 0;
+    height: 100%
+}
+
+.container .wraper:first-child .page {
+    padding: 0 !important
+}
+
+.container .wraper:first-child .page .title {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+@media screen and (max-width: 480px) {
+    .container .wraper:first-child .page .title img {
+        width: 70%
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .container .wraper:first-child .page .title {
+        -webkit-filter: blur(0);
+        -moz-filter: blur(0);
+        filter: blur(0);
+        width: 970px;
+        text-align: left
+    }
+    .container .wraper:first-child .page .title img,
+    .container .wraper:first-child .page .title .text {
+        float: left
+    }
+}
+
+.container .wraper:first-child .page .title .text {
+    color: #fff;
+    text-transform: uppercase;
+    font: 59px 'Geomanist Extra Light';
+    letter-spacing: 0.2em;
+    padding-left: 50px;
+    display: none
+}
+
+@media screen and (min-width: 1120px) {
+    .container .wraper:first-child .page .title .text {
+        display: block
+    }
+}
+
+.container .wraper:first-child .page .explore {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    cursor: pointer;
+    color: #00d5e3;
+    text-decoration: none;
+    font: 10px 'Geomanist Light';
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+@media screen and (min-width: 1120px) {
+    .container .wraper:first-child .page .explore {
+        -webkit-filter: blur(0);
+        -moz-filter: blur(0);
+        filter: blur(0);
+        text-align: left
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .container .wraper:first-child .page .explore {
+        bottom: 70px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .container .wraper:first-child .page .explore {
+        font-size: 18px
+    }
+}
+
+.container .wraper:first-child .page .explore img,
+.container .wraper:first-child .page .explore span {
+    float: left;
+    display: block
+}
+
+.container .wraper:first-child .page .explore span {
+    padding: 10px 0 0 46px
+}
+
+.container .wraper:first-child .page .explore:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: url("../img/explore.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 26px;
+    height: 42px
+}
+
+.container .wraper:first-child .page .explore:hover {
+    color: #ffffff
+}
+
+.container .wraper:first-child .page .explore:hover:before {
+    background-position: -26px 0
+}
+
+.container .wraper:last-child {
+    padding-bottom: 20px
+}
+
+@media screen and (min-width: 1024px) {
+    .container .wraper:last-child {
+        padding-bottom: 40px
+    }
+}
+
+.container .wraper:last-child .page {
+    padding-bottom: 80px
+}
+
+.container .wraper.dark {
+    background: #272727
+}
+
+.container .wraper.white {
+    background: #fff
+}
+
+.container .wraper.grey {
+    background: #f3f4f4;
+    color: #001d57;
+}
+
+.container .wraper.blue {
+    background: #002d64;
+    color: #ffffff;
+}
+
+.container .wraper.grey-gradient {
+    background: #d0d4dd;
+    background: -moz-linear-gradient(left, #ffffff 0%, #d0d4dd 100%);
+    background: -webkit-linear-gradient(left, #ffffff 0%,#d0d4dd 100%);
+    background: linear-gradient(to right, #ffffff 0%,#d0d4dd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d0d4dd',GradientType=1 );
+}
+
+@media screen and (min-width: 768px) {
+    .container .wraper.with-web .inside {
+        padding-top: 0 !important
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container .wraper.with-web .page section h1 {
+        margin: 130px 0 78px 0
+    }
+}
+
+.container .wraper .page {
+    overflow: hidden;
+    *zoom: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container .wraper .page .inside {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px
+}
+
+.container .wraper .page header {
+    color: #001d57;
+    font: 16px "Geomanist Regular";
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 90px;
+}
+
+.container .wraper .page header:first-child {
+    margin-top: 40px;
+}
+
+.container .wraper .page header.with-margin {
+    margin-bottom: 40px;
+}
+
+.container .wraper.gradient .page header, .container .wraper.dark .page header {
+    color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+    .container .wraper .page header.with-web {
+        margin-top: 100px;
+        margin-bottom: 100px
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container .wraper .page header.with-web {
+        margin-top: 200px;
+        margin-bottom: 100px
+    }
+}
+
+@media screen and (min-width: 1424px) {
+    .container .wraper .page header.with-web {
+        margin-top: 300px;
+        margin-bottom: 200px
+    }
+}
+
+.container .wraper .page header span {
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    width: 20px;
+    margin: 0 5px;
+    height: 1px;
+    background: #001d57
+}
+
+.container .wraper.gradient .page header span, .container .wraper.dark .page header span {
+    background: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+    .container .wraper .page header span {
+        width: 120px
+    }
+}
+
+.container .wraper .page .web {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    width: 60%;
+    max-width: 900px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .container .wraper .page .web {
+        display: block
+    }
+}
+
+.container .wraper .page section {
+    overflow: hidden;
+    *zoom: 1;
+    z-index: 1;
+    position: relative;
+}
+
+.container .wraper .page section ul {
+    letter-spacing: 0.05em;
+    font-family: 'Geomanist Light';
+    font-size: 14px;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.container .wraper .page section ul li {
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 1120px) {
+    .container .wraper .page section {
+        margin-bottom: 50px
+    }
+}
+
+.container .wraper .page section h1 {
+    position: relative;
+    color: #001d57;
+    font: 24px 'Geomanist Extra Light';
+    letter-spacing: 0.07em;
+    width: 90%;
+    margin: 50px 0 50px 0;
+    max-width: 500px;
+    text-transform: uppercase;
+}
+
+.container .wraper .page section h1.wide {
+    max-width: 920px;
+}
+
+.container .wraper.gradient .page section h1, .container .wraper.dark .page section h1 {
+    color: #ffffff;
+}
+
+.container .wraper .page section h1.no-logo {
+    margin-top: 40px;
+}
+
+.container .wraper .page section h1.no-logo:before {
+    display: none;
+}
+
+.container .wraper .page section h1.white {
+    color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+    .container .wraper .page section h1 {
+        margin: 180px 0 50px 0;
+        font-size: 49px
+    }
+    .container .wraper .page section h1:before {
+        content: '';
+        position: absolute;
+        top: -130px;
+        left: 0;
+        background-image: url("../img/golem-letter-blue.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        width: 52px;
+        height: 112px
+    }
+
+    .container .wraper.gradient .page section h1:before, .container .wraper.dark .page section h1:before {
+        background-image: url('../img/golem-letter-white.png');
+    }
+
+    .page-press .container .wraper .page section h1:before {
+        background-image: url("../img/golem-blue.png");
+        width: 265px;
+        height: 122px
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container .wraper .page section h1 {
+        padding-top: 30px;
+        margin: 205px 0 50px;
+        width: 930px
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .container .wraper .page section .row {
+        overflow: hidden;
+        *zoom: 1;
+        margin-bottom: 75px;
+        padding: 0 40px;
+    }
+    .container .wraper .page section .row:last-child {
+        margin-bottom: 0
+    }
+    .container .wraper .page section.col-3 p {
+        width: 30%;
+        margin-right: 5%;
+        padding-right: 0;
+    }
+    .container .wraper .page section.col-3 p:last-child {
+        margin-right: 0;
+    }
+    .container .wraper .page section.col-2 p, .container .wraper .page section.col-2 .row > div {
+        width: 46%;
+        padding-right: 0;
+        margin-right: 8%;
+    }
+    .container .wraper .page section.col-2 p:last-child, .container .wraper .page section.col-2 .row > div:last-child {
+        margin-right: 0;
+    }
+    .container .wraper .page section.col-2 .row > div {
+        float: left;
+    }
+}
+
+.container .wraper .page section p {
+    color: #001d57;
+    width: 100%;
+    float: none;
+    font: 14px 'Geomanist Light';
+    margin-bottom: 40px;
+    letter-spacing: 0.05em
+}
+
+.container .wraper.gradient .page section p, .container .wraper.dark .page section p {
+    color: #ffffff;
+}
+
+.container .wraper .page section p span {
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+    letter-spacing: 0.2em
+}
+
+.container .wraper .page section p span.uppercase {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    display: inline;
+}
+
+.container .wraper .page section p img,
+.container .wraper .page section p svg {
+    display: block;
+    margin-top: 15px;
+    border: 0
+}
+
+.container .wraper .page section p img.text-image {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+}
+
+.container .wraper .page section p img.photo {
+    border-radius: 100%;
+    max-width: 125px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.container .wraper .page section p svg path {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    fill: #001d57;
+}
+
+.container .wraper .page section p a:hover svg path {
+    fill: #001d57
+}
+
+@media screen and (min-width: 768px) {
+    .container .wraper .page section p, .container .wraper .page section ul {
+        font-size: 18px;
+        line-height: 1.5em
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .container .wraper .page section p {
+        margin-bottom: 0;
+        float: left
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .container .wraper .page section p {
+        padding-left: 60px
+    }
+}
+
+.container .wraper .page section p:last-child {
+    margin-right: 0
+}
+
+.container .wraper .page .video {
+    position: relative;
+    z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+    .container .wraper .page .video {
+        border: 1px solid #00d5e3;
+        padding: 40px
+    }
+}
+
+.container .wraper .page .video .inside {
+    display: block;
+    height: 0;
+    padding-top: 10px;
+    padding-bottom: 55.5%;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden
+}
+
+.container .wraper .page .video .inside iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.container .wraper #contact .imapp-btn .imapp,
+.container .wraper #home .imapp-btn .imapp {
+    background-image: url("../img/imapp.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 18px;
+    display: inline-block
+}
+
+.container .wraper #contact .imapp-btn {
+    position: absolute;
+    right: 0;
+    padding: 28px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s
+}
+
+.container .wraper #contact .imapp-btn:hover {
+    background-color: #00d6e3
+}
+
+.container .wraper #home .imapp-btn {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    padding: 0 50px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 50px;
+    border: 0;
+    display: none;
+    color: #001d57;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.container .wraper.gradient #home .imapp-btn {
+    color: #00d5e3;
+}
+
+@media screen and (min-width: 620px) {
+    .container .wraper #home .imapp-btn {
+        display: block
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .container .wraper #home .imapp-btn {
+        padding: 0;
+        width: 925px
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .container .wraper #home .imapp-btn {
+        bottom: 20px;
+    }
+}
+
+.container .wraper #contact ul {
+    margin: 0;
+    padding: 0
+}
+
+.container .wraper #contact ul li {
+    list-style: none;
+    color: #ffffff;
+    font: 36px 'Geomanist Extra Light';
+    margin-bottom: 45px;
+    text-transform: uppercase
+}
+
+.container .wraper #contact ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s
+}
+
+.container .wraper #contact ul li a svg path {
+    fill: #00d6e3;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s
+}
+
+.container .wraper #contact ul li a:hover {
+    color: #00d6e3
+}
+
+.container .wraper #contact ul li a:hover svg path {
+    fill: #00d6e3
+}
+
+.container .wraper #contact .row {
+    margin-bottom: 0
+}
+
+.container .wraper #contact .imapp-btn {
+    bottom: 0;
+    border: 1px solid #00d6e3
+}
+
+.container .wraper #contact form {
+    *zoom: 1;
+    margin-bottom: 75px
+}
+
+.container .wraper #contact form:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.container .wraper #contact h1.white {
+    width: auto;
+    max-width: 700px;
+}
+.container .wraper #contact h1.white:before {
+    background-image: url('../img/golem-letter-white.png');
+}
+
+@media screen and (min-width: 768px) {
+    .container .wraper #contact form {
+        border: 1px solid #00d6e3;
+        padding: 40px
+    }
+}
+
+.container .wraper #contact form input {
+    float: left;
+    height: 60px;
+    font-size: 21px;
+    font-family: "Geomanist Light";
+}
+
+.container .wraper #contact form input::-webkit-input-placeholder {
+    color: #00d6e3;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    transition: opacity .5s;
+}
+
+.container .wraper #contact form input:focus::-webkit-input-placeholder {
+    opacity: .4;
+}
+
+.container .wraper #contact form input:-moz-placeholder {
+    color: #00d6e3;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    transition: opacity .5s;
+}
+
+.container .wraper #contact form input:focus:-moz-placeholder {
+    opacity: .4;
+}
+
+.container .wraper #contact form input::-moz-placeholder {
+    color: #00d6e3;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    transition: opacity .5s;
+}
+
+.container .wraper #contact form input:focus::-moz-placeholder {
+    opacity: .4;
+}
+
+.container .wraper #contact form input:-ms-input-placeholder {
+    color: #00d6e3;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    transition: opacity .5s;
+}
+
+.container .wraper #contact form input:focus:-ms-input-placeholder {
+    opacity: .4;
+}
+
+.container .wraper #contact form input[type="email"] {
+    width: 80%;
+    border: 0;
+    background: #004f7d;
+    color: #00d6e3;
+    padding: 0 20px
+}
+
+.container .wraper #contact form input[type="submit"] {
+    width: 20%;
+    border: 0;
+    background: #00d6e3;
+    color: #001d57;
+    text-transform: uppercase;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+    letter-spacing: .2em;
+}
+
+.container .wraper #contact form input[type="submit"]:hover {
+    background: #ffffff;
+
+}
+
+.nav {
+    font-family: "Geomanist Regular";
+    margin-top: 70px;
+    position: relative;
+    z-index: 4;
+}
+
+.nav--blue .nav__item {
+    color: #001d57;
+}
+
+.nav--blue .nav__item a {
+    color: #001d57;
+}
+
+.nav--blue .nav__item span {
+    background-color: #001d57;
+}
+
+.nav__list {
+    list-style: none;
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.nav__item {
+    display: inline-block;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.nav__item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav__item:hover a {
+    color: #00d6e3;
+}
+
+.nav__item:hover span {
+    background-color: #00d6e3;
+}
+
+.nav__item span {
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 8px 10px 0 10px;
+}
+
+.chart {
+    position: relative;
+}
+
+.legend {
+    width: 100%;
+    margin-top: 80px;
+    font-size: 0;
+    display: none;
+}
+
+.legend__label, .legend__value {
+    vertical-align: bottom;
+    padding-bottom: 60px;
+}
+
+.legend__label {
+    font-size: 18px;
+    padding-right: 3%;
+    padding-bottom: 63px;
+    letter-spacing: 0.02em;
+}
+
+.legend__label:nth-child(3) {
+    padding-left: 8%;
+}
+
+.legend__value {
+    font-size: 49px;
+    font-family: "Geomanist Extra Light";
+    line-height: 49px;
+    letter-spacing: 0.02em;
+}
+
+.button {
+    display: inline-block;
+    color: #001d57;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    font-family: "Geomanist Light";
+}
+
+.button--last {
+    margin-bottom: 40px;
+}
+
+.button__arrow, .button__line {
+    display: inline-block;
+    margin-bottom: 4px;
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #001d57;
+}
+
+.button__line {
+    margin-right: 20px;
+}
+
+.button__arrow {
+    position: relative;
+    width: 120px;
+    margin-left: 20px;
+}
+
+.button__arrow:before, .button__arrow:after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 1px;
+    background-color: #001d57;
+    right: -3px;
+}
+
+.button__arrow:before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    top: -9px;
+}
+
+.button__arrow:after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    top: 9px;
+}
+
+.button:hover {
+    color: #00d6e3;
+}
+
+.button:hover .button__arrow:before, .button:hover .button__arrow:after, .button:hover .button__arrow, .button:hover .button__line {
+    background-color: #00d6e3;
+}
+
+.row .btn {
+    margin-top: 40px;
+}
+
+.container .wraper .page section.col-1 p {
+    float: none;
+}
+
+.container #home .scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.countdown {
+    font-size: 36px;
+    font-family: "Geomanist Extra Light";
+    text-transform: uppercase;
+}
+
+.video-placeholder {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -ms-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    z-index: 0;
+    transition: opacity .5s;
+}
+
+.press {
+    color: #ffffff;
+    margin-top: 100px;
+}
+
+.press .button {
+    font-family: "Geomanist Regular";
+    color: #ffffff;
+    float: right;
+    margin-top: 40px;
+}
+
+.press .button .button__arrow,
+.press .button .button__arrow:before,
+.press .button .button__arrow:after {
+    background-color: #ffffff
+}
+
+.press .button:hover {
+    color: #00d6e3;
+}
+
+.press .button:hover .button__arrow:before,
+.press .button:hover .button__arrow:after,
+.press .button:hover .button__arrow,
+.press .button:hover .button__line {
+    background-color: #00d6e3;
+}
+
+.press__title {
+    font-size: 16px;
+    font-family: "Geomanist Regular";
+    text-transform: uppercase;
+    margin-bottom: 90px;
+}
+
+.press__title span {
+    display: inline-block;
+    width: 200px;
+}
+
+.press__title:after {
+    content: '';
+    width: calc(100% - 200px);
+    height: 1px;
+    background-color: #ffffff;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 8px;
+}
+
+.press__title--small {
+    margin-bottom: 40px;
+}
+
+.press__title--small:after {
+    display: none;
+}
+
+.press__title--small:before {
+    content: '';
+    width: 20%;
+    height: 1px;
+    background-color: #ffffff;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 8px;
+}
+
+.press__title--small span {
+    width: 80%;
+    padding-left: 20px;
+}
+
+.press__column {
+    width: 50%;
+    float: left;
+    margin-bottom: 90px;
+}
+
+.press__column p {
+    font-size: 18px;
+    font-family: "Geomanist Light";
+    letter-spacing: 0.025em;
+}
+
+.press__column a {
+    text-decoration:none;
+}
+
+.press__value {
+    font-size: 49px;
+    font-family: "Geomanist Extra Light";
+    margin-left: 0px;
+}
+
+.press__value--small {
+    font-size: 34px;
+}
+
+.press__value--smaller {
+    font-size: 17px;
+}
+
+.press__value--upper {
+    text-transform: uppercase;
+}
+
+.press__button {
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ffffff;
+    font-size: 36px;
+    line-height: 38px;
+    font-family: "Geomanist Extra Light";
+    cursor: pointer;
+    transition: background-color .5s, color .5s;
+}
+
+.press__button:hover {
+    color: #001d57;
+    background-color: #ffffff;
+}
+
+.footer-title {
+    font-size: 16px;
+    font-family: "Geomanist Regular";
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 90px;
+}
+
+.footer-title span {
+    display: inline-block;
+    width: 80px;
+}
+
+.footer-title:after {
+    content: '';
+    width: calc(100% - 80px);
+    height: 1px;
+    background-color: #ffffff;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 8px;
+}
+
+[data-popup="show"] {
+    display: none;
+    position: relative;
+}
+
+.popup {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 100px 0;
+}
+
+.popup__content {
+    letter-spacing: 0.05em;
+    padding: 0 40px;
+}
+
+.popup__title {
+    font-size: 16px;
+    font-family: "Geomanist Regular";
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.popup__title span {
+    display: inline-block;
+    width: 150px;
+}
+
+.popup__title:after {
+    content: '';
+    width: calc(100% - 150px);
+    height: 1px;
+    background-color: #ffffff;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 8px;
+}
+
+.checkbox {
+    margin-top: 45px;
+}
+
+.checkbox__input {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    margin-right: 20px;
+    background-color: transparent;
+    transition: background-color .3s;
+}
+
+.checkbox__input:hover {
+    background-color: #ffffff;
+}
+
+.checkbox__input--checked {
+    background: #ffffff url('../img/checkbox-checked.png') center center no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+}
+
+.checkbox__label {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 13px;
+}
+
+.popup-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(253, 253, 253, .9);
+    z-index: 10;
+}
+
+.popup-overlay--hide {
+    display: none;
+}
+
+.eth-token {
+    margin: 70px -40px;
+    border: 1px solid #001d57;
+    text-align: center;
+    font-size: 36px;
+    padding: 25px 10px;
+    font-family: "Geomanist Extra Light";
+    word-wrap: break-word;
+}
+
+#highResolutionLogo {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 80px;
+}
+
+.container .wraper .page section p.the_codeine {
+    color: #ffffff;
+    float: right;
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.container .wraper .page section p.the_codeine a {
+    color: #ffffff;
+}
+
+.container .wraper .page section p.the_codeine a:hover {
+    color: #00d6e3;
+}
+
+.page-press .container .wraper .page section h2,
+.page-press .container .wraper .page section h3 {
+    font: 59px 'Geomanist Extra Light';
+}
+
+.page-press .container .wraper.gradient .page section h2 {
+    color: #ffffff;
+}
+
+.page-press .container .wraper .page section h3 {
+    margin: 0 0 25px 0;
+    padding-left: 60px;
+}
+
+.page-press .container .wraper .page section .quote {
+    position: relative;
+}
+.page-press .container .wraper .page section .quote:before {
+    font: 59px 'Geomanist Extra Light';
+    content: '';
+    top: 18px;
+    left: 20px;
+    position: absolute;
+    background-image: url('../img/quote.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 38px;
+}
+
+.page-press .container .wraper .page section .quote-metadata p {
+    font: 20px 'Geomanist Extra Light';
+    margin: 0;
+    line-height: 1.5;
+}
+
+.page-press .container .wraper .page section .quote-metadata-author {
+    text-transform: uppercase;
+}
+
+#press-mentions ul {
+    margin: 80px 0 0 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+#press-mentions ul li {
+    width: 200px;
+    height: 140px;
+    margin: 0 100px 80px 0;
+}
+
+#press-mentions ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+#press-mentions ul li a .button__arrow {
+    margin-left: 0;
+}
+
+#loadMoreMentions {
+    float: right;
+    margin: 20px 0 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.page-alpha #page3 .row h2 {
+    font: 59px 'Geomanist Extra Light';
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.page-alpha #page3 .col-3 .row > div {
+    display: inline-block;
+    float: left;
+    width: 240px;
+    margin: 0 50px;
+}
+
+.page-alpha #page3 .col-3 .row > div h3 {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.page-alpha #page3 .col-3 .row > div p {
+    width: auto;
+    padding: 0;
+    font-size: 15px;
+}
+
+.page-alpha .container .wraper .page .image {
+    margin: 100px auto;
+    max-width: 700px;
+    border: 1px solid #00d5e3;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-alpha .container .wraper .page .image .inside {
+    display: block;
+    max-width: 620px;
+    max-height: 476px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+.page-alpha .container .wraper .page .image .inside img {
+    max-width: 100%;
+    display: block;
+    width: 100%;
+}
+
+#furtherInstructions {
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+#furtherInstructions:hover {
+    color: #00d6e3;
+}
+#furtherInstructions:hover .button__arrow,
+#furtherInstructions:hover .button__arrow:before,
+#furtherInstructions:hover .button__arrow:after {
+    background-color: #00d6e3;
+}
+
+#furtherInstructions .button__arrow,
+#furtherInstructions .button__arrow:before,
+#furtherInstructions .button__arrow:after {
+    background-color: #fff;
+}
+
+.container .wraper .page section p.the_codeine a,
+#loadMoreMentions,
+#loadMoreMentions .button__arrow,
+#loadMoreMentions .button__arrow:before,
+#loadMoreMentions .button__arrow:after,
+#press-mentions ul li a .button__arrow,
+#press-mentions ul li a .button__arrow:before,
+#press-mentions ul li a .button__arrow:after,
+#furtherInstructions,
+#furtherInstructions .button__arrow,
+#furtherInstructions .button__arrow:before,
+#furtherInstructions .button__arrow:after,
+#highResolutionLogo,
+#highResolutionLogo .button__arrow,
+#highResolutionLogo .button__arrow:before,
+#highResolutionLogo .button__arrow:after {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s
+}
+
+@media screen and (max-width: 1300px) {
+    .nav__item span {
+        width: 10px;
+        margin: 8px 5px 0 5px;
+    }
+
+    .nav__list {
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1119px) {
+    .eth-token {
+        margin: 70px 0;
+    }
+
+    .popup__content {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .nav {
+        display: none;
+        margin: 0 -20px;
+        padding: 10px 40px;
+        background: #ffffff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .nav__list {
+        display: inline-block;
+    }
+
+    .nav__item {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .nav__item a {
+        color: #001d57;
+    }
+
+    .nav__item span {
+        background-color: #001d57;
+    }
+
+    .container .wraper .hamburger {
+        display: block;
+    }
+
+    .container .wraper .page {
+        overflow: visible;
+    }
+
+    .legend__label, .legend__value {
+        display: inline-block;
+        width: 49%;
+    }
+
+    .legend__label:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .row .btn {
+        margin-top: 20px;
+    }
+
+    .press__column {
+        float: none;
+        width: 100%;
+    }
+
+    .press__countdown, .press__value {
+        margin-left: 20px;
+    }
+
+    .eth-token {
+        font-size: 26px;
+    }
+
+    #highResolutionLogo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button--small {
+        height: auto;
+        line-height: normal;
+    }
+    .button--small .button__arrow {
+        display: none;
+    }
+    .button {
+        font-size: 14px;
+    }
+
+    .popup {
+        font-size: 14px;
+    }
+
+    .checkbox__input {
+        width: 40px;
+        height: 40px;
+    }
+
+    .checkbox__label {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .container .wraper #contact ul li {
+        font-size: 26px;
+    }
+
+    .button__line {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .legend__label, .legend__value {
+        display: block;
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .legend__label {
+        margin-bottom: 10px;
+    }
+
+    .legend__value {
+        margin-bottom: 40px;
+    }
+
+    .button__arrow {
+        width: 60px;
+    }
+
+    .container .wraper #contact ul li {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .press__value {
+        font-size: 36px;
+    }
+
+    .press__value--small, .countdown {
+        font-size: 26px;
+    }
+
+    .press__button {
+        font-size: 26px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .container .wraper #contact form input[type="email"] {
+        width: 60%;
+        font-size: 18px;
+    }
+
+    .container .wraper #contact form input[type="submit"] {
+        width: 40%;
+        font-size: 18px;
+    }
+
+    .container .wraper #contact ul li {
+        font-size: 16px;
+    }
+
+    .chart {
+        display: none !important;
+    }
+
+    .legend {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .button {
+        font-size: 12px;
+        height: 40px;
+        line-height: 40px;
+        letter-spacing: 0.15em;
+    }
+
+    .button--last {
+        margin-bottom: 20px;
+    }
+
+    .button__arrow {
+        width: 30px;
+        margin-left: 10px;
+    }
+
+    .button__arrow:before, .button__arrow:after {
+        width: 10px;
+        right: -1px;
+    }
+
+    .button__arrow:before {
+        top: -4px;
+    }
+
+    .button__arrow:after {
+        top: 4px;
+    }
+
+    .row .btn {
+        margin-top: 10px;
+    }
+
+    .container .wraper #contact ul li {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .container .wraper #contact ul li svg {
+        width: 20px;
+        margin-bottom: -10px;
+    }
+
+    .container .wraper .page section p {
+        margin-bottom: 20px;
+    }
+
+    .press__countdown, .press__value {
+        margin-left: 10px;
+    }
+
+    .countdown, .press__value--small {
+        font-size: 20px;
+    }
+}
+
+
+
+.container .inside .canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@media screen and (min-width: 1024px) {
+    #home .inside {
+        padding-top: 0 !important
+    }
+    #page2 {
+        margin-bottom: -300px;
+    }
+    #page3 {
+        padding-top: 400px
+    }
+    #wraper3 .web {
+        top: 350px
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #page2 {
+        margin-bottom: -400px;
+    }
+    #page3 {
+        padding-top: 365px
+    }
+    #wraper3 .web {
+        top: 380px
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    #page3 {
+        padding-top: 400px
+    }
+    #wraper3 .web {
+        top: 500px
+    }
+}
