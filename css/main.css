@@ -1,23 +1,20 @@
 @font-face {
-    font-family: 'Geomanist Extra Light';
-    src: url("fonts/geomanist-extralight-webfont.eot");
-    src: url("fonts/geomanist-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/geomanist-extralight-webfont.woff2") format("woff2"), url("fonts/geomanist-extralight-webfont.woff") format("woff"), url("fonts/geomanist-extralight-webfont.ttf") format("truetype");
+    font-family: 'Quicksand-Light';
+    src: url("fonts/Quicksand-Light.ttf");
     font-weight: normal;
     font-style: normal
 }
 
 @font-face {
-    font-family: 'Geomanist Light';
-    src: url("fonts/geomanist-light-webfont.eot");
-    src: url("fonts/geomanist-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/geomanist-light-webfont.woff2") format("woff2"), url("fonts/geomanist-light-webfont.woff") format("woff"), url("fonts/geomanist-light-webfont.ttf") format("truetype");
+    font-family: 'Quicksand-Regular';
+    src: url("fonts/Quicksand-Regular.ttf");
     font-weight: normal;
     font-style: normal
 }
 
 @font-face {
-    font-family: 'Geomanist Regular';
-    src: url("fonts/geomanist-regular-webfont.eot");
-    src: url("fonts/geomanist-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/geomanist-regular-webfont.woff2") format("woff2"), url("fonts/geomanist-regular-webfont.woff") format("woff"), url("fonts/geomanist-regular-webfont.ttf") format("truetype");
+    font-family: 'Quicksand-Medium';
+    src: url("fonts/Quicksand-Regular.ttf");
     font-weight: normal;
     font-style: normal
 }
@@ -36,7 +33,7 @@ body,
 }
 
 body {
-    font-family: "Geomanist Light", Helvetica, Arial, Sans-serif;
+    font-family: "Quicksand-Regular", Helvetica, Arial, Sans-serif;
     letter-spacing: 0.2em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -203,7 +200,7 @@ a:hover {
 .container .wraper:first-child .page .title .text {
     color: #fff;
     text-transform: uppercase;
-    font: 59px 'Geomanist Extra Light';
+    font: 59px 'Quicksand-Light';
     letter-spacing: 0.2em;
     padding-left: 50px;
     display: none
@@ -228,7 +225,7 @@ a:hover {
     cursor: pointer;
     color: #00d5e3;
     text-decoration: none;
-    font: 10px 'Geomanist Light';
+    font: 10px 'Quicksand-Regular';
     letter-spacing: 0.2em;
     text-transform: uppercase;
     z-index: 3;
@@ -353,7 +350,7 @@ a:hover {
 
 .container .wraper .page header {
     color: #001d57;
-    font: 16px "Geomanist Regular";
+    font: 16px "Quicksand-Medium";
     text-transform: uppercase;
     position: relative;
     margin-top: 90px;
@@ -442,7 +439,7 @@ a:hover {
 
 .container .wraper .page section ul {
     letter-spacing: 0.05em;
-    font-family: 'Geomanist Light';
+    font-family: 'Quicksand-Regular';
     font-size: 14px;
     padding-left: 20px;
     margin: 0;
@@ -461,7 +458,7 @@ a:hover {
 .container .wraper .page section h1 {
     position: relative;
     color: #001d57;
-    font: 24px 'Geomanist Extra Light';
+    font: 24px 'Quicksand-Light';
     letter-spacing: 0.07em;
     width: 90%;
     margin: 50px 0 50px 0;
@@ -499,7 +496,7 @@ a:hover {
         position: absolute;
         top: -130px;
         left: 0;
-        background-image: url("../img/golem-letter-blue.png");
+        background-image: url("../img/modific-letter-blue.png");
         background-position: 0 0;
         background-repeat: no-repeat;
         width: 52px;
@@ -507,11 +504,11 @@ a:hover {
     }
 
     .container .wraper.gradient .page section h1:before, .container .wraper.dark .page section h1:before {
-        background-image: url('../img/golem-letter-white.png');
+        background-image: url('../img/modific-letter-white.png');
     }
 
     .page-press .container .wraper .page section h1:before {
-        background-image: url("../img/golem-blue.png");
+        background-image: url("../img/modific-blue.png");
         width: 265px;
         height: 122px
     }
@@ -560,7 +557,7 @@ a:hover {
     color: #001d57;
     width: 100%;
     float: none;
-    font: 14px 'Geomanist Light';
+    font: 14px 'Quicksand-Regular';
     margin-bottom: 40px;
     letter-spacing: 0.05em
 }
@@ -745,7 +742,7 @@ a:hover {
 .container .wraper #contact ul li {
     list-style: none;
     color: #ffffff;
-    font: 36px 'Geomanist Extra Light';
+    font: 36px 'Quicksand-Light';
     margin-bottom: 45px;
     text-transform: uppercase
 }
@@ -800,7 +797,7 @@ a:hover {
     max-width: 700px;
 }
 .container .wraper #contact h1.white:before {
-    background-image: url('../img/golem-letter-white.png');
+    background-image: url('../img/modific-letter-white.png');
 }
 
 @media screen and (min-width: 768px) {
@@ -814,7 +811,7 @@ a:hover {
     float: left;
     height: 60px;
     font-size: 21px;
-    font-family: "Geomanist Light";
+    font-family: "Quicksand-Regular";
 }
 
 .container .wraper #contact form input::-webkit-input-placeholder {
@@ -888,7 +885,7 @@ a:hover {
 }
 
 .nav {
-    font-family: "Geomanist Regular";
+    font-family: "Quicksand-Medium";
     margin-top: 70px;
     position: relative;
     z-index: 4;
@@ -977,7 +974,7 @@ a:hover {
 
 .legend__value {
     font-size: 49px;
-    font-family: "Geomanist Extra Light";
+    font-family: "Quicksand-Light";
     line-height: 49px;
     letter-spacing: 0.02em;
 }
@@ -990,7 +987,7 @@ a:hover {
     height: 60px;
     line-height: 60px;
     font-size: 16px;
-    font-family: "Geomanist Light";
+    font-family: "Quicksand-Regular";
 }
 
 .button--last {
@@ -1070,7 +1067,7 @@ a:hover {
 
 .countdown {
     font-size: 36px;
-    font-family: "Geomanist Extra Light";
+    font-family: "Quicksand-Light";
     text-transform: uppercase;
 }
 
@@ -1095,7 +1092,7 @@ a:hover {
 }
 
 .press .button {
-    font-family: "Geomanist Regular";
+    font-family: "Quicksand-Medium";
     color: #ffffff;
     float: right;
     margin-top: 40px;
@@ -1120,7 +1117,7 @@ a:hover {
 
 .press__title {
     font-size: 16px;
-    font-family: "Geomanist Regular";
+    font-family: "Quicksand-Medium";
     text-transform: uppercase;
     margin-bottom: 90px;
 }
@@ -1171,7 +1168,7 @@ a:hover {
 
 .press__column p {
     font-size: 18px;
-    font-family: "Geomanist Light";
+    font-family: "Quicksand-Regular";
     letter-spacing: 0.025em;
 }
 
@@ -1181,7 +1178,7 @@ a:hover {
 
 .press__value {
     font-size: 49px;
-    font-family: "Geomanist Extra Light";
+    font-family: "Quicksand-Light";
     margin-left: 0px;
 }
 
@@ -1205,7 +1202,7 @@ a:hover {
     border: 1px solid #ffffff;
     font-size: 36px;
     line-height: 38px;
-    font-family: "Geomanist Extra Light";
+    font-family: "Quicksand-Light";
     cursor: pointer;
     transition: background-color .5s, color .5s;
 }
@@ -1217,7 +1214,7 @@ a:hover {
 
 .footer-title {
     font-size: 16px;
-    font-family: "Geomanist Regular";
+    font-family: "Quicksand-Medium";
     text-transform: uppercase;
     color: #ffffff;
     margin-top: 90px;
@@ -1225,12 +1222,12 @@ a:hover {
 
 .footer-title span {
     display: inline-block;
-    width: 80px;
+    width: 120px;
 }
 
 .footer-title:after {
     content: '';
-    width: calc(100% - 80px);
+    width: calc(100% - 120px);
     height: 1px;
     background-color: #ffffff;
     display: inline-block;
@@ -1256,7 +1253,7 @@ a:hover {
 
 .popup__title {
     font-size: 16px;
-    font-family: "Geomanist Regular";
+    font-family: "Quicksand-Medium";
     text-transform: uppercase;
     margin-bottom: 60px;
 }
@@ -1331,7 +1328,7 @@ a:hover {
     text-align: center;
     font-size: 36px;
     padding: 25px 10px;
-    font-family: "Geomanist Extra Light";
+    font-family: "Quicksand-Light";
     word-wrap: break-word;
 }
 
@@ -1361,7 +1358,7 @@ a:hover {
 
 .page-press .container .wraper .page section h2,
 .page-press .container .wraper .page section h3 {
-    font: 59px 'Geomanist Extra Light';
+    font: 59px 'Quicksand-Light';
 }
 
 .page-press .container .wraper.gradient .page section h2 {
@@ -1377,7 +1374,7 @@ a:hover {
     position: relative;
 }
 .page-press .container .wraper .page section .quote:before {
-    font: 59px 'Geomanist Extra Light';
+    font: 59px 'Quicksand-Light';
     content: '';
     top: 18px;
     left: 20px;
@@ -1390,7 +1387,7 @@ a:hover {
 }
 
 .page-press .container .wraper .page section .quote-metadata p {
-    font: 20px 'Geomanist Extra Light';
+    font: 20px 'Quicksand-Light';
     margin: 0;
     line-height: 1.5;
 }
@@ -1437,7 +1434,7 @@ a:hover {
 }
 
 .page-alpha #page3 .row h2 {
-    font: 59px 'Geomanist Extra Light';
+    font: 59px 'Quicksand-Light';
     color: #ffffff;
     margin-bottom: 0;
 }
