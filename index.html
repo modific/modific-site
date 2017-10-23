@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="Mass Customization">
-    <meta name="keywords" content="Modific, 3D">
+    <meta name="keywords" content="Modific, 3D, Impressão 3D, Customização em Massa">
     <meta name="msapplication-config" content="icons/browserconfig.xml" />
     <title>Modific.me</title>
     <link rel="stylesheet" href="css/vendor.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="css/additional.css">
     <!--[if IE]><link rel="shortcut icon" href="icons/favicon.ico"><![endif]-->
     <link rel="apple-touch-icon-precomposed" href="icons/apple-touch-icon.png">
-    <link rel="icon" href="icons/favicon-32x32.png">
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png">
     <link rel="manifest" href="icons/manifest.json">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/smooth.js"></script>
 </head>
 <body class="home">
 <div class="container">
@@ -21,155 +23,154 @@
         <div class="page" id="home">
           <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="sobre.html">01<span></span>sobre</a></li>
-                    <li class="nav__item"><a href="projetos.html">02<span></span>projetos</a></li>
-                    <li class="nav__item"><a href="estrutura.html">03<span></span>estrutura</a></li>
-                    <li class="nav__item"><a href="contato.html">04<span></span>contato</a></li>
-                    <li class="nav__item"><a href="estrutura.html">03<span></span>estrutura</a></li>
-                    <li class="nav__item"><a href="contato.html">04<span></span>contato</a></li>
+                    <li class="nav__item"><a href="#sobre">01<span></span>sobre</a></li>
+                    <li class="nav__item"><a href="#missao">02<span></span>missão</a></li>
+                    <li class="nav__item"><a href="#tecnologia">03<span></span>tecnologia</a></li>
+                    <li class="nav__item"><a href="#recursos">04<span></span>recursos</a></li>
+                    <li class="nav__item"><a href="#serviços">05<span></span>serviços</a></li>
+                    <li class="nav__item"><a href="#contato">06<span></span>contato</a></li>
                 </ul>
             </nav>
            <div class="inside">
                 <div class="scroll"></div>
                 <canvas id="stage" class="canvas"></canvas>
-                <div class="hamburger"> <span>toggle menu</span></div>
                 <div class="title"> <img src="img/modific.png">
-                    <div class="text"> Customização<br>
+                <div class="text"> Customização<br>
                         em Massa</div>
                </div>
            </div>
         </div>
     </div>
-    <div class="wraper white" id="wraper4">
-        <div class="page" id="page4">
+    <div class="wraper white" id="sobre">
+        <div class="page">
             <div class="inside">
-                <header> 02.3<span></span>THE ECOSYSTEM</header>
+                <header> 01<span></span>SOBRE</header>
                 <section class="col-3">
-                    <h1>modific Is The New Way The Internet Will Work</h1>
+                    <h2>Modific é o novo jeito de desenvolver, fabricar e vender produtos</h2>
                     <div class="row">
-                        <p>modific is a global, open sourced, decentralized supercomputer  that anyone can access. It's made up of the combined power of user's machines, from personal laptops to entire datacenters.</p>
-                        <p>Anyone will be able to use modific to compute (almost) any program you can think of, from rendering to research to running websites, in a completely decentralized & inexpensive way.</p>
-                        <p>The modific Network is a decentralized sharing economy of computing power, where anyone can make money 'renting' out their computing power or developing & selling software.</p>
+                        <p>A Modific é ao mesmo tempo um estúdio de Design de Produto e um Centro de Fabricação Digital. Nascemos preparados para as novas tendências de consumo e para a 4ª revolução industrial.</p>
+                        <p>Somos o mestre artesão do século XXI. Temos o domínio customização com nossos softwares e os super poderes da manufatura digital com nossas máquinas.</p>
+                        <p>Fazemos a profunda customização de produtos para que empresas entreguem maior valor agregado e pessoas consumam bens que realmente atendam suas necessidades.</p>
                     </div>
                 </section>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-    <div class="wraper gradient" id="wraper5">
-        <div class="page" id="page5">
+    <div class="wraper gradient" id="missao">
+        <div class="page">
             <div class="inside">
-                <header> 02.4<span></span>TECHNOLOGY</header>
+                <header> 02<span></span>MISSÃO</header>
                 <section class="col-3">
-                    <h1 class="wide">Decentralized, Secure, & Open to Development</h1>
+                    <h2>As pessoas são diferentes,
+                      <br> os produtos também devem ser</h2>
                     <div class="row">
-                        <p>
-                           <span>DECENTRALIZED AND SCALABLE</span>
-                            There is no single point of failure and no trusted authority, even though modific is capable of  connecting millions of nodes using a P2P architecture
-                        </p>
-                        <p>
-                            <span>SECURE</span>
-                            All computations take place in virtual machines and are fully isolated from the host’s system
-                        </p>
-                        <p>
-                            <span>ALWAYS OPEN FOR INNOVATIVE INTEGRATIONS</span>
-                            Developers can deploy their own integration on modific and implement an appropriate monetization mechanism.
-                        </p>
+                        <p>Queremos customizar tudo, para todos. Utilizando das mais modernas técnicas de desenvolvimento e fabricação de produtos estamos tornando escalável o que até então é considerado inescalável, a fabricação em massa de produtos físicos personalizados.</p>
+                        <p>Somos uma mistura de aspirina e vitamina para as metodologias de desenvolvimento, meios de produção e modos logísticos. Permitimos que as pessoas escolham o que querem consumir antes mesmo da fabricação. Estamos reinventando a indústria e os modos de consumo.</p>
+                        <p>Nossa missão não é a perfeição, ela não existe. Acreditamos o desenvolvimento dos produtos nunca deve terminar, mas sim acontecer constantemente, permitindo o lançamento contínuo e gradual de versões sempre melhores que as anteriores.</p>
                     </div>
                 </section>
             </div>
         </div>
     </div>
-    <div class="wraper white" id="wraper4">
-        <div class="page" id="page4">
+    <div class="wraper white" id="tecnologia">
+        <div class="page">
             <div class="inside">
-                <header> 02.3<span></span>THE ECOSYSTEM</header>
+                <header> 03<span></span>TECNOLOGIA</header>
                 <section class="col-3">
-                    <h1 class="wide">Worldwide Sharing Economy of Computing Power</h1>
+                    <h2 class="wide">Bem vindo a digitalização da Indústria</h2>
                     <div class="row">
-                        <p>modific enables users/applications (requestors) to rent out cycles of other users’ (providers) machines. Any user ranging from a single PC owner to a large data center can contribute resources to modific network.</p>
-                        <p>Software developers are in the center of modific’s ecosystem: Application Registry and Transaction Framework enable anyone to deploy and distribute applications in the modific network.</p>
-                        <p>An Ethereum-based transaction system clears payments between providers, requestors and software developers.</p>
+                      <p>
+                         <span>PLATAFORMA</span>
+                         Com o Tool Kit de modificação, o cliente pode manipular formas, padrões, estruturas e cores e ainda visualizar em tempo real o modo como o produto será antes mesmo de sua fabricação. Todo o tipo de input é permitido, números, barras de “scroll”, lista de opções, cores, imagens, outros modelos 3D. Utilizando de nossa API é possível também conectar com sites, aplicativos e bancos de dados externos para a processamento automático de dados.
+                      </p>
+                      <p>
+                          <span>PAINEL DE CONTROLE</span>
+                          Nossa plataforma cuida da trajetória completa de vida útil dos produtos, gerenciamento de produção, precificação dos produtos e extração de relatórios. É possível indicar quais parâmetros podem ser modificados, localização de venda, custos com logística, montagem, impostos e ainda conectar com APIs de sistemas externos como ERPs e MRPs. Tudo centralizado em um único local.
+
+                      </p>
+                      <p>
+                          <span>MANUFATURA DIGITAL</span>
+                          A Modific integra e relaciona com mais de 20 centros de fabricação digital ao redor do mundo, incluindo Brasil, Estados Unidos, Alemanha, Japão, China, Canadá e Índia. Independente do tipo de tecnologia, sendo impressão 3D, corte a laser ou usinagem é possível fabricar praticamente qualquer tipo produtos sob demanda sem possuir nenhuma máquina.
+                      </p>
                     </div>
                 </section>
             </div>
         </div>
     </div>
-    <div class="wraper gradient" id="wraper5">
-        <div class="page" id="page5">
+    <div class="wraper gradient" id="recursos">
+        <div class="page">
             <div class="inside">
-                <header> 02.4<span></span>TECHNOLOGY</header>
+                <header> 04<span></span>RECURSOS</header>
                 <section class="col-3">
-                    <h1 class="wide">Decentralized, Secure, & Open to Development</h1>
+                    <h2 class="wide">Pense no mercado de APPs,
+                      <br> para produtos físicos</h2>
                     <div class="row">
                         <p>
-                           <span>DECENTRALIZED AND SCALABLE</span>
-                            There is no single point of failure and no trusted authority, even though modific is capable of  connecting millions of nodes using a P2P architecture
+                           <span>ESCALABILIDADE</span>
+                            A Indústria não será mais ser um local exclusivo de produção em seriada em massa. Com a digitalização de processos, pela primeira vez os os conceitos de escalabilidade e customização podem andar juntos. Um projeto da origem a infinitas variedades.
                         </p>
                         <p>
-                            <span>SECURE</span>
-                            All computations take place in virtual machines and are fully isolated from the host’s system
+                            <span>ACESSO GLOBAL</span>
+                            Com estoques digitais, descentralização da produção e recursos otimizados de logística, empresas de qualquer porte e país podem ter acesso ao mercado global sem precisar lidar com complexos processos de internacionalização.
                         </p>
                         <p>
-                            <span>ALWAYS OPEN FOR INNOVATIVE INTEGRATIONS</span>
-                            Developers can deploy their own integration on modific and implement an appropriate monetization mechanism.
+                            <span>MÉTRICAS</span>
+                            Conheça profundamente o consumidor e gere pesquisas de mercado com informações definitivamente relevantes. Mais do que saber as preferências, temos a chance de entender as reais necessidades das pessoas.
                         </p>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-    <div class="wraper grey-gradient font-dark" id="wraper6">
-        <div class="page" id="page6">
-            <div class="inside">
-                <header> 02.5<span></span>FEATURES</header>
-                <section class="col-3">
-                    <h1 class="wide">modific is being built on some of the world's most cutting edge technologies</h1>
-                    <div class="row">
+                      </div>
+                        <div class="row">
                         <p>
-                            <span>P2P Network</span>
-                            Peer-to-peer architecture guarantees decentralization and scalability. modific supports peer discovery and communication with a specific node. Every connection is encrypted and signed to guarantee security and authentication.
+                           <span>CUSTOMIZAÇÃO EM MASSA</span>
+                           Todos devem ter o que precisam, do modo que precisam e quando precisam. Habilitando customizações estéticas, mecânicas e ergonômicas nos produtos elevamos o nível de lealdade e conversões dos clientes.
                         </p>
                         <p>
-                            <span>Transaction System</span>
-                            modific includes a multi-agent transaction system for matching users requesting computing power with its providers.
+                            <span>NOVAS FORMAS</span>
+                            O design paramétrico e generativo de produtos permite a exploração de formas. Objetos orgânicos e com formas até então inconcebíveis, podem ser facilmente materializados utilizando processamento em nuvem e fabricação digital.
                         </p>
                         <p>
-                            <span>Task Definition</span>
-                            Users define computing tasks easily using modific's Task Definition Framework and libraries for high-level programming languages. modific then automatically distributes each task over the network to computing nodes.
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                            <span>Task Computation</span>
-                            Computations in modific nodes take place inside isolated virtual machines, for maximum security. Providers are able to decide how many CPU cores, and how much RAM and disk space they wish to rent to the modific Network.
-                        </p>
-                        <p>
-                            <span>Reputation System</span>
-                            A reputation system enforces desired behavior of nodes in a decentralized environment, without relying on any supervising institution. This allows nodes to attribute a reputation rank to their peers. A node's rank is lowered in case of inappropriate behavior and is increased after successful computation.
-                        </p>
-                        <p>
-                            <span>Application Registry & Transaction Framework</span>
-                            Developers can create and distribute software on the modific Network's Application Registry (kind of like an app store), and use the Transaction Framework to choose whatever remuneration model they desire to make a profit (or not) from their software.
+                            <span>SEGURANÇA</span>
+                            Processamento dos dados e modelos 3D em servidores seguros, com alta estabilidade, criptografia avançada possibilidade de processamento descentralizado em redes de blockchain.
                         </p>
                     </div>
                 </section>
             </div>
         </div>
     </div>
-
-    <div class="wraper blue" id="wraper9">
+    <div class="wraper grey-gradient font-dark" id="serviços">
+        <div class="page">
+            <div class="inside">
+                <header> 05<span></span>SERVIÇOS</header>
+                <section class="col-3">
+                    <h2 class="wide">FÁBRICA, ESTÚDIO, ATELIER</h2>
+                    <div class="row">
+                        <p>
+                            <span>Desenvolvimento de Produtos</span>
+                            Somos uma empresa de estrategistas, designers e engenheiros apaixonados por digitalização de processos, compras digitais e em melhorar a vida das pessoas.
+                        </p>
+                        <p>
+                            <span>Modelagem 3D</span>
+                            Para digitalização das ideias e escalabilidade de customização em massa confeccionamos modelos 3D em softwares paramétricos ou generativos.
+                        </p>
+                        <p>
+                            <span>Manufatura Digital</span>
+                            Em nosso parque de impressoras 3D podemos produzir, protótipos, lotes piloto e até mesmos produção seriada de produtos customizados diretamente no Brasil.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="wraper blue" id="contato">
         <div class="page" id="contact">
             <div class="inside">
                 <section class="col-3">
                     <div class="footer-title"><span>Contato</span></div>
-                    <h1 class="white">Ligue ou envie um email:</h1>
+                    <h2 class="white">Assine nossa newsletter:</h2>
+                        <form name="contato-site" netlify-honeypot="bot-field" netlify>
+                            <input type="hidden" name="bot-field">
+                            <input type="email" placeholder="Seu endereço de email . . ." name="email">
+                            <input type="submit" value="Enviar">
+                        </form>
                     <div class="row">
                         <ul>
                             <li>
@@ -197,12 +198,18 @@
                             </li>
                         </ul>
                     </div>
+                    <div>
+                        <p class="slogan">
+                           Customizando tudo,
+                           <br>para todos.
+                        </p>
+                    </div>
                 </section>
             </div>
         </div>
     </div>
 </div>
 <script src="js/vendor.min.js"></script>
-<script src="js/main.js"></script>
+<script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
 </body>
 </html>
